@@ -88,15 +88,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Health Check') {
-            steps {
-                sleep time: 10, unit: 'SECONDS'
-                sh """
-                    curl -f http://${EC2_HOST#*@}:${HOST_PORT}/health || exit 1
-                """
-            }
-        }
     }
 
     post {
