@@ -101,6 +101,5 @@ pipeline {
     post {
         success { echo "✅ Deployment successful! Build #${BUILD_NUMBER}" }
         failure { echo "❌ Pipeline failed. Check logs." }
-        always  { cleanWs() }
     }
 }
