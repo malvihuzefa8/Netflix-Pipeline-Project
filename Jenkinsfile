@@ -37,7 +37,7 @@ pipeline {
             steps {
                 echo "Packaging jar/war..."
                 sh 'mvn -B package -DskipTests'
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                archiveArtifacts artifacts: 'target/*.war', fingerprint: true
             }
         }
 
